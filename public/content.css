@@ -1,0 +1,22 @@
+#myId1 {
+  position: fixed;
+  top: 25px;
+  left: calc(100% - 500px);
+  zoom: 0.75;
+  z-index: 2147483647;
+}
+
+#myId1header {
+  position: absolute;
+  height: 100px;
+  cursor: move;
+  top: -20px;
+  left: 50%;
+  width: 60%;
+  transform: translateX(-50%);
+}
+
+#ovaledgeExt{
+  width: 400px;
+  min-height: 300px;
+}

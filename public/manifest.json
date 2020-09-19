@@ -1,0 +1,40 @@
+{
+  "name": "OvalEdge",
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "browser_action": {},
+  "icons": {
+    "16": "OvalEdge_symbol-02.png",
+    "48": "OvalEdge_symbol-02.png",
+    "128": "OvalEdge_symbol-02.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "http://*/",
+    "https://*/*",
+    "tabs",
+    "contextMenus",
+    "storage"
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y",
+        "chromeos": "Ctrl+Shift+U",
+        "linux": "Ctrl+Shift+J"
+      }
+    }
+  },
+
+  "web_accessible_resources": ["*.html"]
+}
