@@ -30,11 +30,36 @@ const IconsContainer = styled.div`
   justify-content: space-evenly;
   padding-top: 10px;
 `;
-
+// drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.18))
 const MenuIconContainer = styled.div`
   display: inline-block;
   text-align: center;
   cursor: pointer;
+  color: #0099cc;
+  height: 100px;
+  width: 100px;
+  background: white;
+  zoom: 1;
+  transition: zoom 300ms ease;
+  filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.18));
+  &:hover {
+    
+
+    filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.18));
+    zoom: 1.02
+  }
+  svg {
+    height: 70px;
+    width: 70px;
+    fill: currentColor;
+    circle {
+      display: none;
+    }
+    path {
+      stroke: currentColor;
+      fill: currentColor;
+    }
+  }
 `;
 
 const Desc = styled.div`
@@ -95,10 +120,10 @@ class Home extends Component {
     } else {
       homeTemplate = (
         <InnerContent>
-          <DescContainer>
+          {/* <DescContainer>
             <Desc>Use OvalEdge extension</Desc>
             <Desc> for instant access to your data</Desc>
-          </DescContainer>
+          </DescContainer> */}
           <IconsContainer>
             <Link to="/favourite">
               <MenuIconContainer>

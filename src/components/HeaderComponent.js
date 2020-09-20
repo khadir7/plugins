@@ -12,7 +12,6 @@ const Header = styled.div`
   width: inherit;
   display: flex;
   justify-content: flex-end;
-  border-bottom: 1px solid #ccc;
   align-items: center;
   padding: 30px 15px;
   position: relative;
