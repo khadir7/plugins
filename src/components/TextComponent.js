@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const TextContainer = styled.div`
   height: 55px;
-  border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,8 +11,11 @@ const TextContainer = styled.div`
   ${(props) =>
     props.hover &&
     `&:hover {
-    background: #edfaff;
+    background: #ffa5000d;
   }`}
+  path {
+    fill: orange;
+  }
 `;
 
 const Text = styled.div`

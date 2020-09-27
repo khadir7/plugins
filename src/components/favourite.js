@@ -13,7 +13,7 @@ const { getFavouritesInfo, setDetailData } = ActionMethods;
 
 const InnerContent = styled.div`
   padding: 15px;
-  border-top: 1px solid #ccc;
+  
 `;
 
 class Favorite extends Component {

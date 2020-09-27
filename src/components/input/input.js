@@ -23,7 +23,7 @@ const input = (props) => {
           }
         >
           <Form.Label>{props.path.name}</Form.Label>
-          {props.path.mandatory ? <Asterisk>*</Asterisk> : ""}
+          {/* {props.path.mandatory ? <Asterisk>*</Asterisk> : ""} */}
           <Form.Control
             {...props.config}
             value={props.value}

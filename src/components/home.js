@@ -22,7 +22,7 @@ const DescContainer = styled.div``;
 
 const IconText = styled.div`
   font-weight: 500;
-  color: #7e7e7e;
+  color: orange;
 `;
 
 const IconsContainer = styled.div`
@@ -35,18 +35,20 @@ const MenuIconContainer = styled.div`
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  color: #0099cc;
+  color: orange;
   height: 100px;
   width: 100px;
-  background: white;
+  background: #ffa5000d;
   zoom: 1;
-  transition: zoom 300ms ease;
-  filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.18));
+  transition: zoom 300ms ease 0s;
+  filter: none;
+  border: 1px solid orange;
+  border-radius: 8px;
+}
   &:hover {
-    
-
-    filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.18));
-    zoom: 1.02
+    filter: drop-shadow(rgba(0, 0, 0, 0.18) 0px 4px 30px);
+    zoom: 1.02;
+    background: white;
   }
   svg {
     height: 70px;
@@ -137,10 +139,10 @@ class Home extends Component {
                 <IconText>Search</IconText>
               </MenuIconContainer>
             </Link>
-            <Link to="/service-desk/context">
+            <Link to="/suggestTerm">
               <MenuIconContainer>
                 <ReportMenuIcon />
-                <IconText>Report</IconText>
+                <IconText>Term</IconText>
               </MenuIconContainer>
             </Link>
           </IconsContainer>

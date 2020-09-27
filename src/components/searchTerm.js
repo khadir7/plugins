@@ -24,6 +24,9 @@ const {
 
 const Icon = styled.span`
   cursor: pointer;
+  path {
+    fill: orange;
+  }
 `;
 
 const Asterisk = styled.span`
@@ -32,7 +35,6 @@ const Asterisk = styled.span`
 
 const InnerContent = styled.div`
   padding: 15px;
-  border-bottom: ${(props) => (props.borderBottom ? `1px solid #ccc` : `0px`)};
 `;
 
 const StyledButton = styled(Button)`
@@ -198,7 +200,6 @@ class SearchTerm extends Component {
     return (
       <Form.Group>
         <Form.Label>{eachInputProp.name}</Form.Label>
-        {eachInputProp.mandatory ? <Asterisk>*</Asterisk> : ""}
         <Form.Control
           type={eachInputProp.type}
           placeholder={eachInputProp.placeholder}
@@ -230,7 +231,7 @@ class SearchTerm extends Component {
     let searchResults = "";
     termTemplate = (
       <>
-        <InnerContent borderBottom={true}>
+        <InnerContent background={true}>
           {searchTermInputTemplate}
           {/* <Form.Label>Show result by type</Form.Label>
           <ButtonGroup className="p-0 col mb-2">
@@ -250,7 +251,7 @@ class SearchTerm extends Component {
         </InnerContent>
         {this.state.active ? (
           <TextComponent
-            color="rgb(0, 153, 204)"
+            color="orange"
             bold={true}
             hover={false}
             text="Want to create a custom term?"
