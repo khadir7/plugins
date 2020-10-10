@@ -11,7 +11,7 @@ let setDomain = ({ tab, search = false }) => {
 
 chrome.contextMenus.create({
   id: "ovalEdgeSelectionMenu",
-  title: "Search OvalEdge for ...",
+  title: "Search Widget for ...",
   contexts: ["all"],
 });
 

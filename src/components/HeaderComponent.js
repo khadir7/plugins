@@ -6,9 +6,10 @@ import UserImage from "components/UserImage";
 import Close from "assets/icons/Close";
 import SettingsIcon from "assets/icons/SettingsIcon";
 import OvalEdgeIcon from "../assets/icons/OvalEdgeIcon";
+import image from "../assets/images/widget.png";
 
 const Header = styled.div`
-  height: 45px;
+  height: 80px;
   width: inherit;
   display: flex;
   justify-content: flex-end;
@@ -28,6 +29,12 @@ const FlexIcon = styled.div`
 
 const IconWrapper = styled.span`
   cursor: pointer;
+`;
+
+const Image = styled.img.attrs({
+  src: image,
+})`
+  width: 100%;
 `;
 
 const UserImgComp = ({ pathname, userId }) => {
@@ -62,7 +69,8 @@ const HeaderComponent = ({ userId }) => {
       <UserImgComp pathname={pathname} userId={userId} />
       <FlexIcon>
         <Link to="/">
-          <OvalEdgeIcon />
+          {/* <OvalEdgeIcon /> */}
+          <Image />
         </Link>
       </FlexIcon>
       <IconWrapper onClick={handleClick}>
