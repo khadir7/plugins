@@ -31,7 +31,7 @@ chrome.runtime.onMessage.addListener((messageObj) => {
   let { message = "", type, isRightClick = false } = messageObj;
   if (type === "selectedText") {
     chrome.contextMenus.update("ovalEdgeSelectionMenu", {
-      title: `Search OvalEdge for ${
+      title: `Search Widget for ${
         message && !isRightClick ? `"${message}"` : `...`
       }`,
     });
